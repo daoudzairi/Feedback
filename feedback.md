@@ -1,10 +1,13 @@
-## Feedback of Defenders-Team
-* TONOYAN Ashot, GEZGEN Soner, NYANGUILE Tischa, ZAÏRI Daoud
+## Feedback of Defenders-Team - Testers:
+TONOYAN Ashot, 
+GEZGEN Soner, 
+NYANGUILE Tischa, 
+ZAÏRI Daoud
 
 # RAPPORT 2021 - https://www.digitaldreamteam.be/
 *Een lijst van de problemen die we hebben gevonden op de site van DigitalDreamTeam
 
-Site 
+## Site 
 - Input: http://digitaldreamteam.be/ 
 - Domain: digitaldreamteam.be 
 - Final Url: https://digitaldreamteam.be/ 
@@ -124,11 +127,11 @@ https://securityheaders.com/?q=https%3A%2F%2Fwww.digitaldreamteam.be%2F&followRe
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## BRUTE FORCE WEB DIRECTORIES:
-1 - Op de afbeelding lanceren we een brute force web directories attack met sqlmap in Kali.  
-2 - De tool probeert meest voorkomende webdirectories van een app te brute forcen. 
-3 - Voor alle "directories krijgen we een status 200 OK Status, behalve voor de directory "assets". /Assets geeft een 301 terug. (Forbidden)  
+- 1 - Op de afbeelding lanceren we een brute force web directories attack met sqlmap in Kali.  
+- 2 - De tool probeert meest voorkomende webdirectories van een app te brute forcen. 
+- 3 - Voor alle "directories krijgen we een status 200 OK Status, behalve voor de directory "assets". /Assets geeft een 301 terug. (Forbidden)  
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%201.png)
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%202.png)
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%203.png)
@@ -139,10 +142,10 @@ Terminal: SQLMap Script
  ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## BRUTE FORCE Password:
-1 - Met Burpsuite in Kali kan jij een HTTP(S) trafic intercepten en de payload zien.  
-2 - Je kunt de payload ook aanpassen en een attack lanceren. 
-3 - Op de afbeelding lanceren we een Password attack. 
-4 - Hiervoor maken we gebruik van een .txt file met alle meest "common passwords" die je kunt vinden op het internet.  
+- 1 - Met Burpsuite in Kali kan jij een HTTP(S) trafic intercepten en de payload zien.  
+- 2 - Je kunt de payload ook aanpassen en een attack lanceren. 
+- 3 - Op de afbeelding lanceren we een Password attack. 
+- 4 - Hiervoor maken we gebruik van een .txt file met alle meest "common passwords" die je kunt vinden op het internet.  
 
 #### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%20Password.png)
@@ -194,9 +197,9 @@ https://www.immuniweb.com/websec/www.digitaldreamteam.be/q8OeWHns/
 
 ## API call (bypass):
 
-1 - Bij de register API call kunnen wij een bearer token extracten naar de route https://plates.azurewebsites.net 
-2 - Wanneer we dezelfde call via postman maken werkt deze token om ons te authorizen  
-3 - Op die manier kunnen wij alle emails en informaties zien van personnen die een plate hebben geshared. 
+- 1 - Bij de register API call kunnen wij een bearer token extracten naar de route https://plates.azurewebsites.net 
+- 2 - Wanneer we dezelfde call via postman maken werkt deze token om ons te authorizen  
+- 3 - Op die manier kunnen wij alle emails en informaties zien van personnen die een plate hebben geshared. 
 
 #### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/GDPR.JPG)
@@ -244,14 +247,14 @@ Nikto scan geeft het volgende output
                    Issuer:   /C=US/O=Let's Encrypt/CN=R3 
 +Start Time:         2021-12-11 12:32:32 (GMT-5) 
 --------------------------------------------------------------------------- 
-+Server: nginx 
-+The anti-clickjacking X-Frame-Options header is not present. 
-+The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS 
-+The site uses SSL and the Strict-Transport-Security HTTP header is not defined. 
-+The site uses SSL and Expect-CT header is not present. 
-+The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type 
-+All CGI directories 'found', use '-C none' to test none 
-+The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack. 
+    - +Server: nginx 
+    - +The anti-clickjacking X-Frame-Options header is not present. 
+    - +The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS 
+    - +The site uses SSL and the Strict-Transport-Security HTTP header is not defined. 
+    - +The site uses SSL and Expect-CT header is not present. 
+    - +The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type 
+    - +All CGI directories 'found', use '-C none' to test none 
+    - +The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack. 
 
 #### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/DDos.png)
