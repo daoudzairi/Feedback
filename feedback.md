@@ -247,14 +247,14 @@ Nikto scan geeft het volgende output
                    Issuer:   /C=US/O=Let's Encrypt/CN=R3 
 +Start Time:         2021-12-11 12:32:32 (GMT-5) 
 --------------------------------------------------------------------------- 
-    - +Server: nginx 
-    - +The anti-clickjacking X-Frame-Options header is not present. 
-    - +The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS 
-    - +The site uses SSL and the Strict-Transport-Security HTTP header is not defined. 
-    - +The site uses SSL and Expect-CT header is not present. 
-    - +The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type 
-    - +All CGI directories 'found', use '-C none' to test none 
-    - +The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack. 
+    - + Server: nginx 
+    - + The anti-clickjacking X-Frame-Options header is not present. 
+    - + The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS 
+    - + The site uses SSL and the Strict-Transport-Security HTTP header is not defined. 
+    - + The site uses SSL and Expect-CT header is not present. 
+    - + The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type 
+    - + All CGI directories 'found', use '-C none' to test none 
+    - + The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack. 
 
 #### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/DDos.png)
