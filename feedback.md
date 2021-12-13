@@ -43,7 +43,7 @@ Running On
     *I can fill in a registration form 
     *I can confirm my registration with a verification link sent by email 
 
-### Vulnerabilities:
+### Problemen:
     - Geen vereiste Minimum Lengte voor wachtwoord 
     - Geen Suggesties voor strong Password 
     - Geen vereiste voor speciale Karakters (bv. Minimum 1 hoofdetter, 1 cijfer, 1 speciale  Karakter) 
@@ -107,7 +107,7 @@ Manueel op de website getest.
 
 ## HTTP HEADER issues - To protect your site against clickjacking attacks:
 
-Problemen: 
+### Problemen:
   - Missing security header: Content-Security-Policy 
   - Missing security header: X-Frame-Options 
   - Missing security header: X-XSS-Protection 
@@ -163,13 +163,9 @@ Kali Linux: Xsser-Script
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Cross-site scripting:
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ## Cookies:
 
-Problemen: 
+### Problemen:
   - Geen Cookies Alert
   - Geen banners gevonden 
   - Geen third-party domains gevonden 
@@ -243,19 +239,19 @@ Niet prone to script injections/ man in the middle/ CSRF, bij registration wordt
 Geen error message bij foute invoer van register-a-plate of afname ervan
 
 Nikto scan geeft het volgende output 
-+ SSL Info: Subject:  /CN=digitaldreamteam.be 
++SSL Info: Subject:  /CN=digitaldreamteam.be 
                    Ciphers:  TLS_AES_256_GCM_SHA384 
                    Issuer:   /C=US/O=Let's Encrypt/CN=R3 
-+ Start Time:         2021-12-11 12:32:32 (GMT-5) 
++Start Time:         2021-12-11 12:32:32 (GMT-5) 
 --------------------------------------------------------------------------- 
-+ Server: nginx 
-+ The anti-clickjacking X-Frame-Options header is not present. 
-+ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS 
-+ The site uses SSL and the Strict-Transport-Security HTTP header is not defined. 
-+ The site uses SSL and Expect-CT header is not present. 
-+ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type 
-+ All CGI directories 'found', use '-C none' to test none 
-+ The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack. 
++Server: nginx 
++The anti-clickjacking X-Frame-Options header is not present. 
++The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS 
++The site uses SSL and the Strict-Transport-Security HTTP header is not defined. 
++The site uses SSL and Expect-CT header is not present. 
++The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type 
++All CGI directories 'found', use '-C none' to test none 
++The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack. 
 
 Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/DDos.png)
