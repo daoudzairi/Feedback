@@ -40,7 +40,9 @@ Running On
 ### [Acceptatiecriteria] 
 *As a visitor I can register So that I can become a valid member 
     *I can navigate to a registration page 
+    
     *I can fill in a registration form 
+    
     *I can confirm my registration with a verification link sent by email 
 
 ### Problemen:
