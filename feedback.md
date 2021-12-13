@@ -171,7 +171,7 @@ Kali Linux: Xsser-Script
   - Geen third-party domains gevonden 
   - Geen stored coukies gevonden 
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Cookies.JPG)
 
 ### Tools:
