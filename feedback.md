@@ -16,17 +16,15 @@ Redirects To
 Running On 
 -Nginx 
 
-## Problemen:
+## Problemen (vulnerabilities):
 - [ ] Athentication - Register
 - [ ] Athentication - Login
 - [ ] /profiel - Page
 - [ ] /plates - Page
-- [ ] Other - Pages
-- [ ] DDos – Cloudflare 
+- [ ] Other - Pages 
 - [ ] HTTP HEADER issues
 - [ ] BRUTE FORCE WEB DIRECTORIES
 - [ ] BRUTE FORCE Password
-- [ ] XSS injection 
 - [ ] XSS injection : Using XSSer
 - [ ] Cross-site scripting 
 - [ ] Cookies 
@@ -34,6 +32,7 @@ Running On
 - [ ] API call (bypass)
 - [ ] API call user wachtwoorden
 - [ ] GDPR 
+- [ ] DDos – Cloudflare
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,6 +51,10 @@ Running On
     - Geen tweede invoer veld voor het bevestigen van een wachtwoord
     - Geen Email-formaat controle in de Invoerveld, valse email wordt geaccepteerd (ookal er geen @ is)
     - Geen verificatie link gestuurd naar email (dus geen bevestiging van bestaande mail) 
+
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Register%201.JPG)
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Register%202.JPG)
 
 ### Tools:
 Manueel op de website getest.
@@ -94,8 +97,132 @@ Manueel op de website getest.
   - Niet mogelijk om zijn wachtwoord te veranderen 
   - Niet mogelijk om zijn account te verwijderen (GDPR)
 
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/pages.JPG)
+
 ### Tools:
 Manueel op de website getest.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## HTTP HEADER issues - To protect your site against clickjacking attacks:
+
+Problemen: 
+  - Missing security header: Content-Security-Policy 
+  - Missing security header: X-Frame-Options 
+  - Missing security header: X-XSS-Protection 
+  - Missing security header: X-Content-Type-Options 
+  - Missing security header: Referrer-Policy 
+
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/HTTP%20headers.JPG)
+
+### Tools:
+https://pentest-tools.com/website-vulnerability-scanning/website-scanner
+https://securityheaders.com/?q=https%3A%2F%2Fwww.digitaldreamteam.be%2F&followRedirects=on 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## BRUTE FORCE WEB DIRECTORIES:
+1 - Op de afbeelding lanceren we een brute force web directories attack met sqlmap in Kali.  
+2 - De tool probeert meest voorkomende webdirectories van een app te brute forcen. 
+3 - Voor alle "directories krijgen we een status 200 OK Status, behalve voor de directory "assets". /Assets geeft een 301 terug. (Forbidden)  
+
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%201.png)
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%202.png)
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%203.png)
+
+### Tools:
+Terminal: SQLMap Script
+ 
+ ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## BRUTE FORCE Password:
+1 - Met Burpsuite in Kali kan jij een HTTP(S) trafic intercepten en de payload zien.  
+2 - Je kunt de payload ook aanpassen en een attack lanceren. 
+3 - Op de afbeelding lanceren we een Password attack. 
+4 - Hiervoor maken we gebruik van een .txt file met alle meest "common passwords" die je kunt vinden op het internet.  
+
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%20Password.png)
+
+### Tools:
+Kali Linux: Burp Suite, Intruder
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## XSS injection:
+Op de afbeelding zien we dat de injection pogingen mislukt zijn op de login pagina. "Injections: 3 – Failed: 3" 
+
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Xss%20Injections.png)
+
+### Tools:
+Kali Linux: Xsser-Script
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Cross-site scripting:
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Cookies:
+
+Problemen: 
+  - Geen Cookies Alert
+  - Geen banners gevonden 
+  - Geen third-party domains gevonden 
+  - Geen stored coukies gevonden 
+
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Cookies.JPG)
+
+### Tools:
+*https://www.cookiemetrix.com/display-report/www.digitaldreamteam.be/02461beeef4eca3d738414d44d48e5f4 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## GDPR - Privacy Policy:
+*The law requires you to inform users about what data you collect, how it's used, stored and protected
+  - Geen privacy policy on website
+
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/GDPR.JPG)
+
+### Tools:
+Manueel op de website getest
+https://www.immuniweb.com/websec/www.digitaldreamteam.be/q8OeWHns/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## API call (bypass):
+
+1 - Bij de register API call kunnen wij een bearer token extracten naar de route https://plates.azurewebsites.net 
+2 - Wanneer we dezelfde call via postman maken werkt deze token om ons te authorizen  
+3 - Op die manier kunnen wij alle emails en informaties zien van personnen die een plate hebben geshared. 
+
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/GDPR.JPG)
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Api%20Plates%202.png)
+
+
+### Tools:
+Kali Linux: Burpsuite Interceptor software
+Postman: https://www.postman.com/ 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## API call user wachtwoorden:
+
+### Problemen: 
+  - Wachtwoord wordt niet geëncrypteerd tijdens de API call. Wachtwoord wordt dus in plaintext gestuurd.
+
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Api%20user%20password.png)
+
+### Tools:
+Browser Developer Console
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -130,114 +257,10 @@ Nikto scan geeft het volgende output
 + All CGI directories 'found', use '-C none' to test none 
 + The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack. 
 
+Screenshots:
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/DDos.png)
+
 ### Tools:
 Software: Locust  
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## HTTP HEADER issues - To protect your site against clickjacking attacks:
-
-Problemen: 
-  - Missing security header: Content-Security-Policy 
-  - Missing security header: X-Frame-Options 
-  - Missing security header: X-XSS-Protection 
-  - Missing security header: X-Content-Type-Options 
-  - Missing security header: Referrer-Policy 
-
-### Tools:
-https://pentest-tools.com/website-vulnerability-scanning/website-scanner
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## BRUTE FORCE WEB DIRECTORIES:
-1 - Op de afbeelding lanceren we een brute force web directories attack met sqlmap in Kali.  
-2 - De tool probeert meest voorkomende webdirectories van een app te brute forcen. 
-3 - Voor alle "directories krijgen we een status 200 OK Status, behalve voor de directory "assets". /Assets geeft een 301 terug. (Forbidden)  
-
-### Tools:
- 
- ------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## BRUTE FORCE Password:
-1 - Met Burpsuite in Kali kan jij een HTTP(S) trafic intercepten en de payload zien.  
-2 - Je kunt de payload ook aanpassen en een attack lanceren. 
-3 - Op de afbeelding lanceren we een Password attack. 
-4 - Hiervoor maken we gebruik van een .txt file met alle meest "common passwords" die je kunt vinden op het internet.  
-Bewijs:
-![External Services architectuur](Link GitHub afbeelding 1)
-
-### Tools:
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## XSS injection:
-Op de afbeelding zien we dat de injection pogingen mislukt zijn op e login pagina. "Injections: 3 – Failed: 3" 
-![External Services architectuur](Link GitHub afbeelding 1)
-Bewijs:
-![External Services architectuur](Link GitHub afbeelding 1)
-![External Services architectuur](Link GitHub afbeelding 2)
-![External Services architectuur](Link GitHub afbeelding 3)
-
-### Tools:
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## XSS injection - Using XSSer:
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## Cross-site scripting:
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## Cookies:
-
-Problemen: 
-  - Geen Cookies Alert
-  - Geen banners gevonden 
-  - Geen third-party domains gevonden 
-  - Geen stored coukies gevonden 
-
-### Tools:
-*https://www.cookiemetrix.com/display-report/www.digitaldreamteam.be/02461beeef4eca3d738414d44d48e5f4 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## GDPR - Privacy Policy:
-*The law requires you to inform users about what data you collect, how it's used, stored and protected
-  - Geen privacy policy on website
-
-### Tools:
-Manueel op de website getest.
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## API call (bypass):
-
-1 - Bij de register API call kunnen wij een bearer token extracten naar de route https://plates.azurewebsites.net 
-2 - Wanneer we dezelfde call via postman maken werkt deze token om ons te authorizen  
-3 - Op die manier kunnen wij alle emails en informaties zien van personnen die een plate hebben geshared. 
-
-Bewijs:
-![External Services architectuur](Link GitHub afbeelding 1)
-![External Services architectuur](Link GitHub afbeelding 2)
-![External Services architectuur](Link GitHub afbeelding 3)
-![External Services architectuur](Link GitHub afbeelding 4)
-
-### Tools:
-Kali Linux: Burpsuite Interceptor software
-Postman: https://www.postman.com/ 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## API call user wachtwoorden:
-
-### Problemen: 
-  - Wachtwoord wordt niet geëncrypteerd tijdens de API call. Wachtwoord wordt dus in plaintext gestuurd.
-
-### Tools:
-Browser Developer Console
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
