@@ -52,7 +52,7 @@ Running On
     - Geen Email-formaat controle in de Invoerveld, valse email wordt geaccepteerd (ookal er geen @ is)
     - Geen verificatie link gestuurd naar email (dus geen bevestiging van bestaande mail) 
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Register%201.JPG)
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Register%202.JPG)
 
@@ -90,14 +90,14 @@ Manueel op de website getest.
     *I can send a message by clicking a help-button on every pageview.
 
 ### Problemen:
-  - Niet mogelijk om een plate te deleten (delete-knop niet actief)
+    - Niet mogelijk om een plate te deleten (delete-knop niet actief)
 
-  - Niet mogelijk om te surfen van Login pagina naar Register pagina 
-  - Niet mogelijk om te surfen naar Profiel pagina
-  - Niet mogelijk om zijn wachtwoord te veranderen 
-  - Niet mogelijk om zijn account te verwijderen (GDPR)
+    - Niet mogelijk om te surfen van Login pagina naar Register pagina 
+    - Niet mogelijk om te surfen naar Profiel pagina
+    - Niet mogelijk om zijn wachtwoord te veranderen 
+    - Niet mogelijk om zijn account te verwijderen (GDPR)
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/pages.JPG)
 
 ### Tools:
@@ -108,13 +108,13 @@ Manueel op de website getest.
 ## HTTP HEADER issues - To protect your site against clickjacking attacks:
 
 ### Problemen:
-  - Missing security header: Content-Security-Policy 
-  - Missing security header: X-Frame-Options 
-  - Missing security header: X-XSS-Protection 
-  - Missing security header: X-Content-Type-Options 
-  - Missing security header: Referrer-Policy 
+    - Missing security header: Content-Security-Policy 
+    - Missing security header: X-Frame-Options 
+    - Missing security header: X-XSS-Protection 
+    - Missing security header: X-Content-Type-Options 
+    - Missing security header: Referrer-Policy 
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/HTTP%20headers.JPG)
 
 ### Tools:
@@ -144,7 +144,7 @@ Terminal: SQLMap Script
 3 - Op de afbeelding lanceren we een Password attack. 
 4 - Hiervoor maken we gebruik van een .txt file met alle meest "common passwords" die je kunt vinden op het internet.  
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%20Password.png)
 
 ### Tools:
@@ -155,7 +155,7 @@ Kali Linux: Burp Suite, Intruder
 ## XSS injection:
 Op de afbeelding zien we dat de injection pogingen mislukt zijn op de login pagina. "Injections: 3 – Failed: 3" 
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Xss%20Injections.png)
 
 ### Tools:
@@ -166,10 +166,10 @@ Kali Linux: Xsser-Script
 ## Cookies:
 
 ### Problemen:
-  - Geen Cookies Alert
-  - Geen banners gevonden 
-  - Geen third-party domains gevonden 
-  - Geen stored coukies gevonden 
+    - Geen Cookies Alert
+    - Geen banners gevonden 
+    - Geen third-party domains gevonden 
+    - Geen stored Cookies gevonden 
 
 #### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Cookies.JPG)
@@ -181,9 +181,9 @@ Kali Linux: Xsser-Script
 
 ## GDPR - Privacy Policy:
 *The law requires you to inform users about what data you collect, how it's used, stored and protected
-  - Geen privacy policy on website
+    - Geen privacy policy on website
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/GDPR.JPG)
 
 ### Tools:
@@ -198,7 +198,7 @@ https://www.immuniweb.com/websec/www.digitaldreamteam.be/q8OeWHns/
 2 - Wanneer we dezelfde call via postman maken werkt deze token om ons te authorizen  
 3 - Op die manier kunnen wij alle emails en informaties zien van personnen die een plate hebben geshared. 
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/GDPR.JPG)
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Api%20Plates%202.png)
 
@@ -212,9 +212,9 @@ Postman: https://www.postman.com/
 ## API call user wachtwoorden:
 
 ### Problemen: 
-  - Wachtwoord wordt niet geëncrypteerd tijdens de API call. Wachtwoord wordt dus in plaintext gestuurd.
+    - Wachtwoord wordt niet geëncrypteerd tijdens de API call. Wachtwoord wordt dus in plaintext gestuurd.
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Api%20user%20password.png)
 
 ### Tools:
@@ -253,7 +253,7 @@ Nikto scan geeft het volgende output
 +All CGI directories 'found', use '-C none' to test none 
 +The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack. 
 
-Screenshots:
+#### Screenshots:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/DDos.png)
 
 ### Tools:
