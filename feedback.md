@@ -62,6 +62,12 @@ Running On
 ### Tools:
 Manueel op de website getest.
 
+### Advies:
+Eerst en vooral 2 wachtwoord velden implementeren voor het aanmaken van een account. Zodat een gebruiker bevestigd wordt van een juist ingevoerde wachtwoord.
+Gebruikers beveiligde accounts laten aanmaken, een wachtwoord van minimum 7 Karaters Met minstens 1 hoofdletter, 1 cijfer en 1 speciale Karakter.
+Vervolgens moet er een verificatie-email worden gestuurd voor het controleren van de echtheid van mails.
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Athentication - Login:
@@ -81,6 +87,9 @@ Manueel op de website getest.
 
 ### Tools:
 Manueel op de website getest.
+
+### Advies:
+Een security feature toe te voegen, dat accounts tijdelijk blokkeert bij meerdere mislukte poggingen(exponentieel verhogen) en een heractivatie link sturen naar de email.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -105,6 +114,11 @@ Manueel op de website getest.
 
 ### Tools:
 Manueel op de website getest.
+
+### Advies:
+Zo snel mogelijk een werkende profielpagina aanmaken die de optie geeft aan de gebruiker om zijn wachtwoord te veranderen of om zijn account te verwijderen.
+Dit moet aanwezig zijn op een website volgens de europese GDPR wetgeving 
+https://flowium.com/blog/gdpr-checklist/ 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -250,7 +264,7 @@ Nikto scan geeft het volgende output
     - + Server: nginx 
     - + The anti-clickjacking X-Frame-Options header is not present. 
     - + The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS 
-    - + The site uses SSL and the Strict-Transport-Security HTTP header is not defined. 
+    - + The site uses SSL and the Strict-Transport-Security HTTP header is not defined. (/homepage)
     - + The site uses SSL and Expect-CT header is not present. 
     - + The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type 
     - + All CGI directories 'found', use '-C none' to test none 
