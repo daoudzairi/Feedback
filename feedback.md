@@ -173,6 +173,9 @@ Feit dat we een 200 OK status krijgen betekend dat de request aanvaard wordt. Na
 ### Tools:
 Kali Linux: Burp Suite, Intruder, Hydra.
 
+### Advies:
+Jullie kunnen eventueel een limit opzetten voor de login feature. Na X aantal keren gefaalde pogingen kunnen jullie de user voor een minuut blokkeren.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## XSS injection:
@@ -187,7 +190,7 @@ Kali Linux: Xsser-Script
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## DOM BASED XSS Injection
-OP de afbeelding zien we dat we een DOM BASED XSS injection proberen maar dit ook een fail. De input field is hiervoor beveiligd.
+OP de afbeelding zien we dat we een DOM BASED XSS injection proberen, zonder success. De input field is hiervoor beveiligd.
 
 ### Screenshot:
 ![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Dom%20Based%20Xss.png)
