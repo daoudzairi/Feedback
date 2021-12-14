@@ -29,6 +29,7 @@ Running On
 - [ ] BRUTE FORCE WEB DIRECTORIES
 - [ ] BRUTE FORCE Password
 - [ ] XSS injection : Using XSSer
+- [ ] DOM BASED XSS Injection
 - [ ] Cross-site scripting 
 - [ ] Cookies 
 - [ ] Privacy Policy
