@@ -178,7 +178,7 @@ Kali Linux: Burp Suite, Intruder, Hydra.
 Op de afbeelding zien we dat de injection pogingen mislukt zijn op de login pagina. "Injections: 3 – Failed: 3" 
 
 #### Screenshots:
-![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Xss%20Injections.png)
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Xss%20Injection%20New.png)
 
 ### Tools:
 Kali Linux: Xsser-Script
@@ -189,7 +189,7 @@ Kali Linux: Xsser-Script
 OP de afbeelding zien we dat we een DOM BASED XSS injection proberen maar dit ook een fail. De input field is hiervoor beveiligd.
 
 ### Screenshot:
-![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Xss%20Injection%20New.png)
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Dom%20Based%20Xss.png)
 
 ### Tools:
 Manueel.
