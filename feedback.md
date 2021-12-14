@@ -166,8 +166,8 @@ Feit dat we een 200 OK status krijgen betekend dat de request aanvaard wordt. Na
 - 4 - Hiervoor maken we gebruik van een .txt file met alle meest "common passwords" die je kunt vinden op het internet.  
 
 #### Screenshots:
-![External Services architectuur]()
-![External Services architectuur]()
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%20Pass%201.png)
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%20Pass%202.png)
 
 ### Tools:
 Kali Linux: Burp Suite, Intruder, Hydra.
@@ -189,7 +189,7 @@ Kali Linux: Xsser-Script
 OP de afbeelding zien we dat we een DOM BASED XSS injection proberen maar dit ook een fail. De input field is hiervoor beveiligd.
 
 ### Screenshot:
-
+![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Xss%20Injection%20New.png)
 
 ### Tools:
 Manueel.
