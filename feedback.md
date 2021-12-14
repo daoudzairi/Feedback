@@ -153,6 +153,10 @@ https://securityheaders.com/?q=https%3A%2F%2Fwww.digitaldreamteam.be%2F&followRe
 ### Tools:
 Terminal: SQLMap Script
  
+### Advies:
+Feit dat we een 200 OK status krijgen betekend dat de request aanvaard wordt. Nadien wordt deze request redirect naar de homepagina. Dit wordt gedaan voor elke webpagina die zelfs niet aanwezig is op de website. Dit zou potentieel een DOS attack triggeren voor de hackers. IPV te redirecten, het is misschien beter om een 404 not found pagina terug te sturen naar de user. 
+- Een voorbeeld is: 
+[Amazon not found page](https://www.amazon.fr/gfgf)
  ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## BRUTE FORCE Password:
@@ -162,10 +166,11 @@ Terminal: SQLMap Script
 - 4 - Hiervoor maken we gebruik van een .txt file met alle meest "common passwords" die je kunt vinden op het internet.  
 
 #### Screenshots:
-![External Services architectuur](https://github.com/daoudzairi/Feedback/blob/main/feedbackimg/Brute%20Force%20Password.png)
+![External Services architectuur]()
+![External Services architectuur]()
 
 ### Tools:
-Kali Linux: Burp Suite, Intruder
+Kali Linux: Burp Suite, Intruder, Hydra.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -177,6 +182,17 @@ Op de afbeelding zien we dat de injection pogingen mislukt zijn op de login pagi
 
 ### Tools:
 Kali Linux: Xsser-Script
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## DOM BASED XSS Injection
+OP de afbeelding zien we dat we een DOM BASED XSS injection proberen maar dit ook een fail. De input field is hiervoor beveiligd.
+
+### Screenshot:
+
+
+### Tools:
+Manueel.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
